@@ -1,236 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>
-        Enrique Salazar Sebastiani
-    </title>
+    <title>Enrique Salazar Sebastiani</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
     <style>
-        .flex-container {
-            display: -webkit-box;
-            display: -moz-box;
+        body {
+            background-color: #000000;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        a {
+            color: #0078ff;
+        }
+
+        .container {
+            font-family: 'Ubuntu Mono', monospace;
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
-            -webkit-box-direction: normal;
-            -moz-box-direction: normal;
-            -webkit-box-orient: vertical;
-            -moz-box-orient: vertical;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-            -webkit-box-pack: center;
-            -moz-box-pack: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-align-content: center;
-            -ms-flex-line-pack: center;
-            align-content: center;
-            -webkit-box-align: center;
-            -moz-box-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-        }
-
-        .flex-item:nth-child(1) {
-            -webkit-box-ordinal-group: 1;
-            -moz-box-ordinal-group: 1;
-            -webkit-order: 0;
-            -ms-flex-order: 0;
-            order: 0;
-            -webkit-box-flex: 0;
-            -moz-box-flex: 0;
-            -webkit-flex: 0 1 auto;
-            -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-            -webkit-align-self: auto;
-            -ms-flex-item-align: auto;
-            align-self: auto;
-        }
-
-        .flex-item:nth-child(2) {
-            -webkit-box-ordinal-group: 1;
-            -moz-box-ordinal-group: 1;
-            -webkit-order: 0;
-            -ms-flex-order: 0;
-            order: 0;
-            -webkit-box-flex: 0;
-            -moz-box-flex: 0;
-            -webkit-flex: 0 1 auto;
-            -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-            -webkit-align-self: auto;
-            -ms-flex-item-align: auto;
-            align-self: auto;
-            width: 200px;
-        }
-
-        /*
-    Legacy Firefox implementation treats all flex containers
-    as inline-block elements.
-*/
-
-        @-moz-document url-prefix() {
-            .flex-container {
-                width: 100%;
-                -moz-box-sizing: border-box;
-            }
-
-        }
-
-        .flex-container2 {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-direction: normal;
-            -moz-box-direction: normal;
-            -webkit-box-orient: horizontal;
-            -moz-box-orient: horizontal;
             -webkit-flex-direction: row;
             -ms-flex-direction: row;
             flex-direction: row;
             -webkit-flex-wrap: nowrap;
             -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-            -webkit-box-pack: justify;
-            -moz-box-pack: justify;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
             -webkit-align-content: center;
             -ms-flex-line-pack: center;
             align-content: center;
-            -webkit-box-align: center;
-            -moz-box-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            height: 100%;
+            color: white;
+        }
+
+        .right {
+            padding: 10px;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+
+        }
+
+        .top {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .bottom {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .left {
+            border-left: 1px solid white;
+            display: flex;
             align-items: center;
+            padding: 10px;
+            font-size: 18px;
         }
 
-        .flex-item2:nth-child(1) {
-            -webkit-box-ordinal-group: 1;
-            -moz-box-ordinal-group: 1;
-            -webkit-order: 0;
-            -ms-flex-order: 0;
-            order: 0;
-            -webkit-box-flex: 0;
-            -moz-box-flex: 0;
-            -webkit-flex: 0 1 auto;
-            -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-            -webkit-align-self: auto;
-            -ms-flex-item-align: auto;
-            align-self: auto;
+
+
+        .modalbox .box {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 100px;
         }
 
-        .flex-item2:nth-child(2) {
-            -webkit-box-ordinal-group: 1;
-            -moz-box-ordinal-group: 1;
-            -webkit-order: 0;
-            -ms-flex-order: 0;
-            order: 0;
-            -webkit-box-flex: 0;
-            -moz-box-flex: 0;
-            -webkit-flex: 0 1 auto;
-            -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-            -webkit-align-self: auto;
-            -ms-flex-item-align: auto;
-            align-self: auto;
+        .modalbox .title {
+            border-bottom: 1px solid #ccc;
+            font-family: verdana;
+            font-size: 22px;
+            letter-spacing: 0.2em;
+            margin: 0;
+            padding: 0 0 10px;
+            text-transform: uppercase;
+            color: #fff;
         }
 
-        /*
-    Legacy Firefox implementation treats all flex containers
-    as inline-block elements.
-*/
+        .modalbox .content {
+            display: block;
+            font-family: Verdana;
+            font-size: 18px;
+            line-height: 22px;
+            padding: 10px 0 0;
+            color: #fff;
+        }
 
-        @-moz-document url-prefix() {
-            .flex-container2 {
-                width: 100%;
-                -moz-box-sizing: border-box;
+        .modalbox .close {
+            color: #fff;
+            display: block;
+            float: right;
+            font-family: Verdana;
+            font-size: 22px;
+            height: 25px;
+            text-decoration: none;
+        }
+
+
+        .modalbox {
+            /* display: none; */
+            position: fixed;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #333333;
+        }
+
+        .modalbox:target {
+            display: block;
+            outline: none;
+        }
+
+        a:link {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        /* visited link */
+
+        a:visited {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        /* mouse over link */
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* selected link */
+
+        a:active {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="../build/three.js"></script>
+
+    <script src="js/renderers/Projector.js"></script>
+    <script src="js/renderers/CanvasRenderer.js"></script>
+
+    <!-- <script src="js/libs/stats.min.js"></script> -->
+
+    <script>
+
+        var container;
+        // var container, stats;
+        var camera, scene, renderer, group, particle;
+        var mouseX = 0, mouseY = 0;
+
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+        init();
+        animate();
+
+        function init() {
+
+            container = document.createElement('div');
+            document.body.appendChild(container);
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
+            camera.position.z = 1000;
+
+            scene = new THREE.Scene();
+
+            var PI2 = Math.PI * 2;
+            var program = function (context) {
+
+                context.beginPath();
+                context.arc(0, 0, 0.5, 0, PI2, true);
+                context.fill();
+
+            };
+
+            group = new THREE.Group();
+            scene.add(group);
+
+            for (var i = 0; i < 1000; i++) {
+
+                var material = new THREE.SpriteCanvasMaterial({
+                    color: Math.random() * 0x808008 + 0x808080,
+                    program: program
+                });
+
+                particle = new THREE.Sprite(material);
+                particle.position.x = Math.random() * 2000 - 1000;
+                particle.position.y = Math.random() * 2000 - 1000;
+                particle.position.z = Math.random() * 2000 - 1000;
+                particle.scale.x = particle.scale.y = Math.random() * 20 + 10;
+                group.add(particle);
+            }
+
+            renderer = new THREE.CanvasRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            // stats = new Stats();
+            // container.appendChild(stats.dom);
+
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            document.addEventListener('touchstart', onDocumentTouchStart, false);
+            document.addEventListener('touchmove', onDocumentTouchMove, false);
+
+            //
+
+            window.addEventListener('resize', onWindowResize, false);
+
+        }
+
+        function onWindowResize() {
+
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        //
+
+        function onDocumentMouseMove(event) {
+
+            mouseX = event.clientX - windowHalfX;
+            mouseY = event.clientY - windowHalfY;
+        }
+
+        function onDocumentTouchStart(event) {
+
+            if (event.touches.length === 1) {
+
+                event.preventDefault();
+
+                mouseX = event.touches[0].pageX - windowHalfX;
+                mouseY = event.touches[0].pageY - windowHalfY;
+
             }
 
         }
 
+        function onDocumentTouchMove(event) {
 
+            if (event.touches.length === 1) {
 
-        .spread {
-            text-align: justify;
+                event.preventDefault();
+
+                mouseX = event.touches[0].pageX - windowHalfX;
+                mouseY = event.touches[0].pageY - windowHalfY;
+
+            }
+
         }
 
-        .spread:after {
-            content: "";
-            display: inline-block;
-            width: 100%;
+        //
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            render();
+            // stats.update();
+
         }
 
-        .stretch_it {
-            white-space: nowrap;
+        function render() {
+
+            camera.position.x += (mouseX - camera.position.x) * 0.05;
+            camera.position.y += (- mouseY - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            group.rotation.x += 0.01;
+            group.rotation.y += 0.02;
+
+            renderer.render(scene, camera);
+
         }
-    </style>
-    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript">//<![CDATA[
-        $(window).load(function () {
-            $.fn.strech_text = function () {
-                var elmt = $(this),
-                    cont_width = elmt.width(),
-                    txt = elmt.html(),
-                    one_line = $('<span class="stretch_it">' + txt + '</span>'),
-                    nb_char = elmt.text().length,
-                    spacing = cont_width / nb_char,
-                    txt_width;
-
-                elmt.html(one_line);
-                txt_width = one_line.width();
-
-                if (txt_width < cont_width) {
-                    var char_width = txt_width / nb_char,
-                        ltr_spacing = spacing - char_width + (spacing - char_width) / nb_char;
-
-                    one_line.css({ 'letter-spacing': ltr_spacing });
-                } else {
-                    one_line.contents().unwrap();
-                    elmt.addClass('justify');
-                }
-            };
-
-
-            $(document).ready(function () {
-                $('.stretch').each(function () {
-                    $(this).strech_text();
-                });
-            });
-        });//]]> 
 
     </script>
-</head>
 
-<body>
-    <div class="flex-container">
-        <div class="flex-item">
-            Enrique Salazar Sebastiani
-            <p class="stretch">
-                JavaScript Developer
-            </p>
-            <div class="flex-container2">
-                <div class="flex-item2">
-                    <a href="https://github.com/EnriqueSalazar">
-                        Github </a>
+    <div class="modalbox">
+        <div class="box">
+            <div class="container">
+                <div class="right">
+                    <div class="top">Enrique Salazar Sebastiani</div>
+                    <div class="bottom">Senior Javascript Engineer</div>
                 </div>
-                <div class="flex-item2">
-                    <a href="https://www.linkedin.com/in/enriquesalazar/">
-                        Linkedin </a>
-
+                <div class="left">
+                    <a href="https://github.com/EnriqueSalazar">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/enriquesalazar/">LinkedIn</a>
                 </div>
             </div>
         </div>
-        <div class="flex-item">
-        </div>
     </div>
+
+
 </body>
+
+</html>

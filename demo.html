@@ -5,6 +5,7 @@
     <title>Enrique Salazar Sebastiani</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
     <style>
         body {
             background-color: #000000;
@@ -17,6 +18,7 @@
         }
 
         .container {
+            font-family: 'Ubuntu Mono', monospace;
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
@@ -62,13 +64,12 @@
 
         }
 
-        .right-container {}
-
         .top {
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
             font-size: 22px;
+            font-weight: bold;
         }
 
         .bottom {
@@ -140,6 +141,32 @@
         .modalbox:target {
             display: block;
             outline: none;
+        }
+
+        a:link {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        /* visited link */
+
+        a:visited {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        /* mouse over link */
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* selected link */
+
+        a:active {
+            color: whitesmoke;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -301,7 +328,8 @@
                     <div class="bottom">Senior Javascript Engineer</div>
                 </div>
                 <div class="left">
-                    GitHub | LinkedIn
+                    <a href="https://github.com/EnriqueSalazar">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/enriquesalazar/">LinkedIn</a>
                 </div>
             </div>
         </div>

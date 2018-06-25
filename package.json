@@ -1,0 +1,25 @@
+{
+  "name": "enriquesalazar.github.io",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnriqueSalazar/enriquesalazar.github.io.git"
+  },
+  "author": "Enrique Salazar Sebastiani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnriqueSalazar/enriquesalazar.github.io/issues"
+  },
+  "homepage": "https://github.com/EnriqueSalazar/enriquesalazar.github.io#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.1"
+  }
+}

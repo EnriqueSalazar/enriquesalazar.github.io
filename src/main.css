@@ -1,0 +1,142 @@
+body {
+  background-color: #000000;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.container {
+  font-family: "Ubuntu Mono", monospace;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  height: 100%;
+  color: white;
+}
+
+.right {
+  padding: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.bottom {
+  text-align: right;
+  font-size: 14px;
+}
+
+.left {
+  border-left: 1px solid white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.modalbox .box {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100px;
+}
+
+.modalbox {
+  /* display: none; */
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #333333;
+}
+
+@media screen and (max-width: 470px) {
+  .container {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+  .top {
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .left {
+    justify-content: center;
+    border-left: 0px;
+  }
+}
+
+a:link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* visited link */
+
+a:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* mouse over link */
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* selected link */
+
+a:active {
+  color: whitesmoke;
+  text-decoration: none;
+}

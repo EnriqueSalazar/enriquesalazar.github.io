@@ -106,27 +106,14 @@
 
         @media screen and (max-width: 470px) {
             .container {
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
                 -webkit-flex-direction: column;
                 -ms-flex-direction: column;
                 flex-direction: column;
-                -webkit-flex-wrap: nowrap;
-                -ms-flex-wrap: nowrap;
-                flex-wrap: nowrap;
-                -webkit-justify-content: center;
-                -ms-flex-pack: center;
-                justify-content: center;
                 -webkit-align-content: stretch;
                 -ms-flex-line-pack: stretch;
                 align-content: stretch;
-                -webkit-align-items: stretch;
-                -ms-flex-align: stretch;
-                align-items: stretch;
             }
             .top {
-                display: flex;
                 justify-content: center;
                 align-items: center;
             }
@@ -136,9 +123,7 @@
                 align-items: center;
             }
             .left {
-                display: flex;
                 justify-content: center;
-                align-items: center;
                 border-left: 0px;
             }
         }
@@ -181,7 +166,7 @@
     <!-- <script src="js/libs/stats.min.js"></script> -->
 
     <script>
-
+        console.log("Example taken from https://github.com/mrdoob/three.js/blob/master/examples/canvas_particles_random.html")
         var container;
         // var container, stats;
         var camera, scene, renderer, group, particle;
